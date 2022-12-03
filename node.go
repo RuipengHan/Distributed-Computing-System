@@ -1115,6 +1115,7 @@ func RoundRobin(process string, total_task int, batch int, testfiles []string) {
 func SchedulerServer() {
 	for {
 		select {
+		// job command: infernce
 		case <-JobsQueue:
 			if round_robin_running {
 				// TODO FIX new job's name
